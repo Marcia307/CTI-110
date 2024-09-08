@@ -4,7 +4,7 @@
 # Create a program that does some basic math on numbers that are entered
 
 print("This Program Claculates and dipsplay trvel expense")
-print()
+print() 
 budget_value=int(input("Enter Budget: "))
 print()
 travel_destination=input("Enter your travel destination: ")
