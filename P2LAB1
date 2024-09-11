@@ -17,9 +17,9 @@ print()
 
 # Calculate circumference
 circumference= radius*2*math.pi
-print("The circumference of the circle is", circumference)
+print("The circumference of the circle is", round(circumference, 2))
 print()
 
 # Calculate area
 area= radius**2*math.pi
-print("The area of the circle is", area)
+print("The area of the circle is", round(area,3))
