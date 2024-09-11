@@ -1,5 +1,16 @@
 # Marcia Tyson
-# 09/09/2024
+# 09/11/2024
 # P2LAB1
 # The program will calculate the diameter, circumference, and area of a circle. Formulas are given below:
 
+# Get float input from user(radius)
+radius= float(input("What is the radius of the circle? "))
+print()
+diameter= radius*2
+print("The diameter of the circle is", diameter)
+print()
+circumference= radius*2*3.14
+print("The circumference of the circle is", circumference)
+print()
+area= radius**2*3.14
+print("The area of the circle is", area)
