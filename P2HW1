@@ -1,0 +1,27 @@
+# Marcia Tyson
+# 9/11/24
+# P2HW1
+# 
+
+print("This Program Claculates and dipsplay trvel expense")
+print()
+budget_value=int(input("Enter Budget: "))
+print()
+travel_destination=input("Enter your travel destination: ")
+print()
+gas_value=int(input("How much do you think you will spend on gas?: "))
+print()
+accomodations_value=int(input("Approximately, how much will you need for accomodations/hotel?: "))
+print()
+food_value=int(input("Lastly how much do  you need for food?: "))
+print()
+expenses_value = gas_value+accomodations_value+food_value
+print("------------Travel Expenses------------")
+
+print("Location:", travel_destination)
+print("Initial Budget", f"${budget_value:.2f}")
+print("Fuel:", f"${gas_value:.2f}")
+print("Accomodation:", f"${accomodations_value:.2f}")
+print("Food:", f"${food_value:.2f}")
+print()
+print("Remaining Balance:", f"${budget_value-expenses_value:.2f}")
