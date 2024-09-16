@@ -1,7 +1,7 @@
 # Marcia Tyson
 # 9/14/24
 # P2HW2
-#
+# Assignment assess student understanding of Lists
 
 #User input
 Module_1=float(input("Enter grade for Module 1: "))
