@@ -1,1 +1,34 @@
+# Marcia Tyson
+# 9/18/24
+# P3HW2
+# Assignment assess student understanding of decision structures/ calculating pay rates usimg if and else statements
+
+# user input
+employee_name=input("Enter employee's name: ")
+employee_hours=int(input("Enter number of hours worked: "))
+employee_payrate=float(input("Enter employee's pay rate: "))
+#Display imput
+print("-"*31)
+print("Employee name: ", employee_name)
+
+# Determine employee pay
+if employee_hours > 40:
+    # They have some overtime
+    regular_payrate_amt = 40*employee_payrate
+    overtime_payrate = employee_payrate*1.5
+    overtime_hours = employee_hours-40
+    overtime_pay_amt = overtime_hours*overtime_payrate
+else:
+    # They don't have overtime
+    regular_payrate_amt = employee_hours* employee_payrate
+    overtime_hours = 0
+    overtime_pay_amt = 0
+
+# calculate gross pay
+gross_pay = regular_payrate_amt+overtime_pay_amt
+
+print()
+print(f"{'Hours Worked':<15}{'Pay Rate':<10}{'OverTime':<10}{'Overtime Pay':<15}{'RegHour Pay':<15}{'Gross Pay':<10}")
+print("-"*85)
+print(f"{employee_hours:<15.1f}${employee_payrate:<9.2f}{overtime_hours:<10.1f}${overtime_pay_amt:<14.2f}${regular_payrate_amt:<14.2f}${gross_pay:<9.2f}")
 
