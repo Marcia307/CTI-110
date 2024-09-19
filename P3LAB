@@ -57,6 +57,9 @@ if num_pennies > 0:
     if num_pennies == 1:
         print(f"{num_pennies} Penny")
     else:
-        print(f"{num_pennies} Pennies")       
+        print(f"{num_pennies} Pennies")
+
+if amount == 0:
+    print("No Change")
 
 
