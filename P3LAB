@@ -3,3 +3,18 @@
 # P3LAB
 # This program allows the user to enter a money (float) value with two places after the decimal.
 
+
+
+# Calculate coins needed for change
+
+# Floor division // Gives you back the whole number from division
+
+# Modules % gives you back the remainder from division
+
+# Get amount of money
+amount = float(input("Enter the amount of money as a float: "))
+print(amount)
+
+#Convert value to integer. Remember the last two digits are still change.
+int_amout = int(amount*100)
+print(int_amount)
