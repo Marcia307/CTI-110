@@ -1,10 +1,6 @@
 # Marcia Tyson
-# 9/16/24
-# P3LAB
-# This program allows the user to enter a money (float) value with two places after the decimal.
-
-
-
+# 9/18/24
+# P3LAB1
 # Calculate coins needed for change
 
 # Floor division // Gives you back the whole number from division
@@ -12,9 +8,55 @@
 # Modules % gives you back the remainder from division
 
 # Get amount of money
-amount = float(input("Enter the amount of money as a float: "))
-print(amount)
+amount = float(input("Enter the amount of money as a float: $"))
 
 #Convert value to integer. Remember the last two digits are still change.
-int_amout = int(amount*100)
-print(int_amount)
+int_amount = int(amount*100)
+
+#Determine how many coins are needed
+num_dollars = int_amount//100
+amount = int_amount - (num_dollars*100)
+
+num_quarters= amount//25
+amount = amount - (num_quarters*25)
+
+num_dimes = amount//10
+amount = amount - (num_dimes*10)
+
+num_nickels = amount//5
+amount = amount - (num_nickels*5)
+
+num_pennies = amount
+
+
+if num_dollars > 0:
+    if num_dollars == 1:
+        print(f"{num_dollars} Dollar")
+    else:
+        print(f"{num_dollars} Dollars")
+        
+if num_quarters > 0:
+    if num_quarters == 1:
+        print(f"{num_quarters} Quarter")
+    else:
+        print(f"{num_quarters} Quarters")
+        
+if num_dimes > 0:
+    if num_dimes == 1:
+        print(f"{num_dimes} Dime")
+    else:
+        print(f"{num_dimes} Dimes")
+        
+if num_nickels > 0: 
+    if num_nickels == 1:
+        print(f"{num_nickels} Nickle")
+    else:
+        print(f"{num_nickels} Nickles")
+        
+if num_pennies > 0:
+    if num_pennies == 1:
+        print(f"{num_pennies} Penny")
+    else:
+        print(f"{num_pennies} Pennies")       
+
+
