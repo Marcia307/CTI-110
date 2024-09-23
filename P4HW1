@@ -1,0 +1,34 @@
+# Marcia Tyson
+# 9/23/24
+# P4HW1
+# Use a loop to add valid grades to a list
+
+# Create an empty list
+grade_list = []
+
+# Get the number of scores
+num_scores = int(input("How many score do you want to enter?: "))
+print()
+
+# For loop to get the values of scores
+for score in range(num_scores):
+    grade = int(input(f"Enter score #{score+1}: "))
+    print()
+
+    # If the grade is INVALID, go into the whie loop
+    while grade < 0 or grade > 100:
+        print("INVALID Score entered!!!!")
+        print("Score should be between 0 and 100")
+        grade = int(input(f"Enter score #{score+1} again: "))
+    # while loop breaks, grade is valid, add it to list
+    grade_list.append(grade)
+
+# All loops broken
+print(f"The valid grades are: {grade_list}")
+
+print(f"Lowest Score:{ min(grade_list):.1f}")
+
+# Remove lowest grade form list
+grade_list.remove(min(grade_list))
+print(f"The final grades are: {grade_list}")
+
