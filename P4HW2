@@ -1,0 +1,60 @@
+# Marcia Tyson
+# 9/25/24
+# P4HW2
+# calculate gross pay, regular pay,overtime for multiple employees
+
+# Create variables
+num_employ = 0
+total_ot = 0
+total_reg = 0
+total_gross = 0
+
+# user input
+name=input("Enter employee's name or 'Done' to terminate: ")
+while name != "Done":
+    # add number of employee's
+    num_employ += 1
+
+    employee_hours=int(input("How many hours did they work?: "))
+    employee_payrate=float(input("What is their pay rate: "))
+#Display imput
+    print("-"*31)
+    print("Employee name: ", name)
+
+# Determine employee pay
+    if employee_hours > 40:
+        # They have some overtime
+        regular_payrate_amt = 40*employee_payrate
+        overtime_payrate = employee_payrate*1.5
+        overtime_hours = employee_hours-40
+        overtime_pay_amt = overtime_hours*overtime_payrate
+    else:
+        # They don't have overtime
+        regular_payrate_amt = employee_hours* employee_payrate
+        overtime_hours = 0
+        overtime_pay_amt = 0
+    
+# calculate gross pay
+    gross_pay = regular_payrate_amt+overtime_pay_amt
+    
+#Add info
+    total_ot += overtime_pay_amt
+    total_reg += regular_payrate_amt
+    total_gross += gross_pay
+
+# Display output
+    print()
+    print(f"{'Hours Worked':<15}{'Pay Rate':<10}{'OverTime':<10}{'Overtime Pay':<15}{'RegHour Pay':<15}{'Gross Pay':<10}")
+    print("-"*76)
+    print(f"{employee_hours:<15.1f}${employee_payrate:<9.2f}{overtime_hours:<10.1f}${overtime_pay_amt:<14.2f}${regular_payrate_amt:<14.2f}${gross_pay:<9.2f}")
+    print()
+    
+    #Get new input
+    name=input("Enter employee's name or 'Done' to terminate: ")
+    
+# Loop ends here
+print(f"Total number of employee's entered: {num_employ}" )
+print(f"Total amount paid for overtime: ${total_ot:.2f}")
+print(f"Total amount paid for regular hours: ${total_reg:.2f} ")
+print(f"Total amount paid in gross: ${total_gross:.2f}")
+
