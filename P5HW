@@ -1,1 +1,68 @@
+# Marcia Tyson
+# 10/2/24
+# P5HW
+# Usinng AI and functions to create a game
+
+# Define a function to create a character
+def create_character():
+    # Prompting user for input
+    dog_name = input("Enter the dog's name: ")
+    bark_power = int(input("Enter the dog's bark power (1-10): "))
+    speed = int(input("Enter the dog's speed (1-100): "))
+    health = int(input("Enter the dog's health (1-100): "))
+
+    # Creating the dog character dictionary
+    dog_character = {
+        'dog_name': dog_name,
+        'bark_power': bark_power,
+        'speed': speed,
+        'health': health
+    }
+    
+    return dog_character
+
+def display_characters(char_list):
+    for char in char_list:
+        print()
+        for key, value in char.items():
+            print(key, value)
+    
+
+
+def dog_bark_attack(attacker, victim):
+    # Simulating the barking attack
+    damage = attacker['bark_power']  # Damage is equal to the attacker's bark power
+    victim['health'] -= damage       # Reduce the victim's health
+
+    # Ensuring health doesn't go below zero
+    if victim['health'] < 0:
+        victim['health'] = 0
+
+    return attacker, victim
+
+# Example usage
+if __name__ == "__main__":
+
+    # Create a list
+    char_list = []
+
+    # Add 2 Characters
+    Bella_char = create_character()
+    Grady_char = create_character()
+
+    # Add characters to list
+    char_list.append(Bella_char)
+    char_list.append(Grady_char)
+
+    #Display
+    display_characters(char_list)
+
+    # Call the attack function
+    Bella_char, Grady_char = dog_bark_attack(Bella_char, Grady_char)
+    print()
+    print (f"{Bella_char['dog_name']} attacks {Grady_char['dog_name']}.")
+    print()
+
+    # Display again
+    display_characters(char_list)
 
